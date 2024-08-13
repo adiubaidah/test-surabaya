@@ -111,6 +111,7 @@ class EmployeeController extends Controller
     }
 
     public function update(Request $request, string $id) {
+        dd($request->all());
         // Validate the request
         $validator = Validator::make($request->all(), [
             'name' => 'string',

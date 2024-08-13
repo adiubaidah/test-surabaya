@@ -15,7 +15,7 @@ class JwtMiddleware
      * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
      */
     public function handle(Request $request, Closure $next): Response
-    {
+    {   
         $token = $request->cookie('accessToken');
 
         if (!$token) {
